@@ -1,3 +1,5 @@
+#Pour lancer l'application : npm start et peut être au préalable npm install
+
 # BiblioJeu
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
