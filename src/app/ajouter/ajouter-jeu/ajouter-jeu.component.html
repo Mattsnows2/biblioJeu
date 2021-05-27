@@ -1,0 +1,71 @@
+<div id="Page">
+
+<form  [formGroup]="ajouterForm" (ngSubmit)="enregisterJeu()">
+
+  <fieldset>
+    <div id="formulaire">
+    <div id="premierePartie">
+    <legend>Ajouter un jeu</legend>
+    <label class="labelNonRadio"><span style="font-weight: bold;">Nom du jeu</span><span style="color: orange; font-size:1.2em;">*</span> </label><br>
+    <input type="text" placeholder="Entrez le nom du jeu" formControlName="title"><br>
+
+    <label class="labelNonRadio"><span style="font-weight: bold;">Prix du jeu</span><span style="color: orange; font-size:1.2em;">*</span></label><br>
+    <input type="text" placeholder="Entrez le prix du jeu" formControlName="price"><br>
+
+    <div  >
+    <label class="labelNonRadio"><span style="font-weight: bold;">Type de planteau</span><span style="color: orange; font-size:1.2em;">*</span> </label> <br>
+    <div *ngFor="let plateau of plateaux" class="form-check form-check-inline">
+
+    <input id="plateau_type_{{plateau.type}}" type="radio" [value]="plateau.type" class="form-check-input"  formControlName="plateaux">
+    <label class="form-check-label">{{plateau.type}}</label>
+  </div>
+    </div>
+
+    <label class="labelNonRadio"><span style="font-weight: bold;">Taille du jeu</span></label><br>
+    <input type="number" formControlName="taille"><br>
+
+    <label class="labelNonRadio"><span style="font-weight: bold;">Référence interne</span></label><br>
+    <input type="text" formControlName="referenceInterne"><br>
+
+    <label class="labelNonRadio"><span style="font-weight: bold;">Description</span></label><br>
+    <textarea rows ="5" cols="33" placeholder="Entreé une description ..." formControlName="description"></textarea>
+  </div>
+  <div id="deuxiemePartie">
+    <div  >
+      <label class="labelNonRadio"><span style="font-weight: bold;">Pile ou secteur</span></label> <br>
+      <div *ngFor="let alimentation of alimentations" class="form-check form-check-inline">
+
+      <input id="alimentation_type_{{alimentation.type}}" type="radio" [value]="alimentation.type" class="form-check-input"  formControlName="alimentations">
+      <label class="form-check-label">{{alimentation.type}}</label>
+    </div>
+      </div>
+
+      <div  >
+        <label class="labelNonRadio"><span style="font-weight: bold;">Etat du jeu</span></label> <br>
+        <div *ngFor="let etat of etats" class="form-check form-check-inline">
+
+        <input id="etat_type_{{etat.etat}}" type="radio" [value]="etat.etat" class="form-check-input"  formControlName="etats">
+        <label class="form-check-label">{{etat.etat}}</label>
+      </div>
+        </div>
+
+        <div  >
+          <label class="labelNonRadio"><span style="font-weight: bold;">Jeu en réparation</span></label> <br>
+          <div *ngFor="let reparation of reparation" class="form-check form-check-inline">
+
+          <input id="reparation_type_{{reparation.reparation}}" type="radio" [value]="reparation.reparation" class="form-check-input"  formControlName="reparation">
+          <label class="form-check-label">{{reparation.reparation}}</label>
+        </div>
+        </div>
+
+        <br>
+
+        </div>
+        </div>
+
+
+    <button id="submitButton" type="submit" [disabled]="ajouterForm.invalid" style="background-color: orange; margin-left:850px">Enregistrer le jeu</button>
+  </fieldset>
+</form>
+
+</div>

@@ -1,0 +1,42 @@
+
+<ul>
+  <li>
+    <div class="list">
+<div id="listJeu"
+*ngFor="let jeuElec of jeu | paginate:{ id:'listening_pagination',
+itemsPerPage:6,
+currentPage:page,
+totalItmps:jeu}">
+
+
+
+<h3>
+ {{ jeuElec.title }}</h3>
+ <img src="assets/test.jpg" style="width: 100px; height: 100px;"><br><br>
+
+ <p>prix: {{jeuElec.price}} €</p>
+
+
+
+<section class="portfolio-experiment">
+  <button (click)="modifierJeuDetail(jeuElec._id)">
+  <a>
+    <span class="text">Modifier</span>
+    <span class="line -right"></span>
+    <span class="line -top"></span>
+    <span class="line -left"></span>
+    <span class="line -bottom"></span>
+  </a>
+</button>
+</section>
+
+ </div>
+</div>
+
+</li>
+
+</ul>
+
+<div>
+  <pagination-controls id='listening_pagination' maxSize='5' directionLinks="true" (pageChange)="page =$event" ></pagination-controls>
+</div>

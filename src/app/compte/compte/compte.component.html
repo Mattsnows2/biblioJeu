@@ -1,0 +1,30 @@
+<div>
+
+  <form [formGroup]="accountForm" (ngSubmit)="saveAccount()">
+
+    <div style="display: flex;">
+    <img src="assets/test.jpg" style="border: 1px solid black; border-radius: 50%; width: 200px; height:200px; margin-left: 200px;">
+
+
+   <p id="nom" style="margin-left: 300px; margin-top: 130px; font-size: 1.5em; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Mike Horn</p> <i class="material-icons" style="color: black; margin-top: 135px;">contact_mail</i>
+</div>
+
+<div style="display: flex; margin-top: 100px;">
+ <p style="margin-left: 200px; font-size: 1.5em; font-weight: bold;  font-family: Arial, Helvetica, sans-serif;">Mon adresse mail</p> <i class="material-icons" style="color: black; margin-top:5px;">email</i>
+ <p style="margin-left: 300px; font-size: 1.5em; font-weight: bold;  font-family: Arial, Helvetica, sans-serif;">Date d'anniversaire</p> <i class="material-icons" style="color: black; margin-top: 5px;">cake</i>
+</div>
+
+<div style="margin-top: 100px;  margin-left: 500px;">
+  <div style="display: flex;">
+   <p style=" font-size: 1.5em; font-weight: bold;   font-family: Arial, Helvetica, sans-serif;">Mot de passse </p><i class="material-icons" style="color: hsl(0, 0%, 0%); margin-top: 5px;">vpn_key</i></div>
+  <p>Modifier son mot de passe :</p>
+  <input type="text" name="mdp" formControlName="mdp" placeholder="Entrez votre nouveau mot de passe ">
+</div>
+  </form>
+
+
+
+</div>
+
+
+

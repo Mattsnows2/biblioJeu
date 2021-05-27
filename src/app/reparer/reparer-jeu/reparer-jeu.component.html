@@ -1,0 +1,20 @@
+
+<div class="list">
+  <div id="listJeu"
+*ngFor="let jeuElec of jeu">
+<div *ngIf="jeuElec.reparation=='oui'">
+
+
+
+<h3>
+ {{ jeuElec.title }}</h3>
+ <p>prix:{{jeuElec.price}}</p>
+ <p>Taille:{{jeuElec.taille}}</p>
+
+
+ </div>
+</div>
+</div>
+
+
+

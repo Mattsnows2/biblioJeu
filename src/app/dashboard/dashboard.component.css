@@ -1,0 +1,45 @@
+#dashboard{
+
+  width:  250px;
+  height: 850px;
+  background-color: rgb(95, 116, 135);
+}
+
+h2,a{
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+a{
+  font-size: 1.2em;
+  color: white;
+}
+
+li{
+  border-bottom: 1px solid white;
+  display: flex;
+}
+a:hover{
+  color: black;
+}
+ul{
+  margin-top: 50px;
+}
+
+li a {
+  display: block;
+
+}
+li{
+
+  height: 80px;
+  text-align: center;
+  line-height: 60px;
+}
+
+a{
+  font-size: 1.3em;
+}
+i{
+  margin-top: 25px;
+}

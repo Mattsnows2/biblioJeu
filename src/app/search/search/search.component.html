@@ -1,0 +1,13 @@
+<div>
+  <label for="search-box">Rechercher un jeu</label>
+
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let jeu of jeu$ |async">
+      <p>{{jeu.title}}</p>
+
+    </li>
+
+  </ul>
+</div>

@@ -1,0 +1,52 @@
+h3{
+
+  font-size: 1.5em;
+  text-align: center;
+}
+p{
+  text-align: center;
+  font-family: proxima-nova, monospace;
+}
+
+
+
+
+.list{
+  display: flex;
+  flex-wrap: wrap;
+
+
+
+}
+
+#listJeu{
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 20px;
+  width: 300px;
+  margin-top: 20px;
+  position: relative;
+  transition: transform 500ms;
+  display:block ;
+  background-color: #dcdcdc;
+
+}
+
+.list:focus-within #listJeu,
+.list:hover #listJeu {
+  transform: translateX(0%);
+}
+
+#listJeu:focus ~ #listJeu,
+#listJeu:hover ~ #listJeu {
+  transform: translateX(10%);
+
+}
+
+.list #listJeu:focus,
+.list #listJeu:hover {
+  transform: scale(1.1);
+
+
+  z-index: 1;
+}
